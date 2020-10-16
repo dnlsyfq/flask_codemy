@@ -75,3 +75,14 @@ Note that we can also optionally enforce the type of the variable being accepted
 |path|like string but also accepts slashers|
 |uuid|accepts UUID strings|
 
+### Rendering templates
+
+```
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+```
